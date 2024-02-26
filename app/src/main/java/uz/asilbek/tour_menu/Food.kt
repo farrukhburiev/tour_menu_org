@@ -4,7 +4,6 @@ import android.net.Uri
 import com.google.gson.Gson
 
 data class Food(
-
     var id: Int,
     var mainImage: String,
     var images: List<String>,
@@ -12,9 +11,10 @@ data class Food(
     var description: String,
     var rating: Double,
     var comments: List<Comment>?,
-    var category: String,
+    var rec_places: List<String>?,
+    var locatedState: String,
     var locatedCountry: String,
-    var locatedState: String
+    var price: String,
 ){
     override fun toString(): String = Uri.encode(Gson().toJson(this))
 
